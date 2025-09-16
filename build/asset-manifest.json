@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5bd81d71.css",
+    "main.js": "/static/js/main.ba7d532f.js",
+    "static/js/453.41b32d1c.chunk.js": "/static/js/453.41b32d1c.chunk.js",
+    "static/media/LeiturasRecomendadas.png": "/static/media/LeiturasRecomendadas.3bb1874e4c34f8129d5b.png",
+    "static/media/Data&Local.png": "/static/media/Data&Local.db252682b3379ea4fc8c.png",
+    "static/media/Forças&Perdas2.png": "/static/media/Forças&Perdas2.6dc7ae3bd566237e42b6.png",
+    "static/media/Forças&Perdas1.jpg": "/static/media/Forças&Perdas1.b66f9c5419f67eeac617.jpg",
+    "static/media/bg_2.png": "/static/media/bg_2.d347a29e365ecad86e38.png",
+    "static/media/CuriosidadesHistóricas.png": "/static/media/CuriosidadesHistóricas.ad2f2beebb474e5c2808.png",
+    "static/media/Stalingrado.jpg": "/static/media/Stalingrado.74e0cee18d4486641905.jpg",
+    "static/media/Forças&Perdas3.jpg": "/static/media/Forças&Perdas3.bc43b71d60fb0dc84a2f.jpg",
+    "static/media/imgMapa.webp": "/static/media/imgMapa.e52d1bed88724d2d9b62.webp",
+    "index.html": "/index.html",
+    "main.5bd81d71.css.map": "/static/css/main.5bd81d71.css.map",
+    "main.ba7d532f.js.map": "/static/js/main.ba7d532f.js.map",
+    "453.41b32d1c.chunk.js.map": "/static/js/453.41b32d1c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5bd81d71.css",
+    "static/js/main.ba7d532f.js"
+  ]
+}
