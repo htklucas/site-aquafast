@@ -1,0 +1,24 @@
+.container {
+    margin: auto;
+    display: block;
+    width: 95%;
+    z-index: 5;
+}
+
+.Titulo {
+    font-family: "Lora", serif;
+    font-size: 54px;
+    font-style: italic;
+    font-weight: 300;
+    text-align: left;
+
+    margin-bottom: 3px;
+    color: #EEC68F;
+}
+
+.hr {
+    border: 0;
+    height: 1px;
+    background: #EEC68F;
+    margin-bottom: 50px;
+}
