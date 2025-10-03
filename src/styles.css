@@ -404,3 +404,208 @@ body.dark .objective-title {
 body.dark .objective-text {
   color: var(--color-text-muted-dark);
 }
+
+
+.logo-img{
+  width: 40%;
+  margin-top: 20px;
+}
+
+.cartaz-section {
+  padding: 0;
+  margin: 0;
+}
+
+.cartaz-image {
+  width: 100%;
+  height: auto;
+  display: block; /* remove espaços brancos */
+}
+
+
+/* Download App Section */
+.download-section {
+  padding: 5rem 1.5rem;
+  background-color: var(--color-bg-secondary-light);
+  transition: background-color 0.3s, color 0.3s;
+}
+body.dark .download-section {
+  background-color: var(--color-bg-secondary-dark);
+}
+
+.download-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+@media (min-width: 900px) {
+  .download-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.download-content {
+  text-align: left;
+}
+
+.download-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #1f2937;
+}
+body.dark .download-title {
+  color: white;
+}
+
+.download-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text-muted-light);
+  margin-bottom: 2rem;
+}
+body.dark .download-text {
+  color: var(--color-text-muted-dark);
+}
+
+.download-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.store-badge {
+  height: 50px;
+  cursor: pointer;
+}
+
+.qr-code {
+  height: 100px;
+}
+
+.download-image-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.download-image {
+  max-width: 300px;
+  height: auto;
+}
+
+.contact-section {
+  position: relative;
+  background: url("./images/fundoContatos.png") no-repeat center center/cover;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-overlay {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 16px;
+  padding: 40px;
+  max-width: 1100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  transition: background 0.3s;
+}
+.contact-container {
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Modo escuro */
+body.dark .contact-overlay {
+  background: rgba(30, 30, 30, 0.85);
+}
+
+
+.contact-info,
+.contact-form {
+  flex: 1;
+  min-width: 280px;
+}
+
+.contact-info h2,
+.contact-form h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--color-text-light);
+}
+
+body.dark .contact-info h2,
+body.dark .contact-form h2 {
+  color: var(--color-text-dark);
+}
+
+.contact-info p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-text-muted-light);
+}
+
+body.dark .contact-info p {
+  color: var(--color-text-muted-dark);
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+}
+
+/* Inputs no modo escuro */
+body.dark .input-group {
+  background: #1E1E1E;
+  border: 1px solid #333;
+}
+
+body.dark .input-group input {
+  color: var(--color-text-dark);
+  background: transparent;
+}
+
+
+.input-group i {
+  margin-right: 10px;
+  font-size: 1.2rem;
+  color: #0077b6;
+}
+
+.input-group input {
+  border: none;
+  outline: none;
+  flex: 1;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  background: #0077b6;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background: #005f87;
+}

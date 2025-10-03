@@ -1,31 +1,48 @@
 import React from 'react';
 import { Logo } from '../components/Logo';
 
+import missaoImg from "../images/home/missaoEmpresa.png";
+import missaoImgDARK from "../images/home/missaoEmpresaDARK.png";
+
+import visaoImg from "../images/home/visaoEmpresa.png";
+import valoresImg from "../images/home/valoresEmpresa.png";
+
+import sobreImg from "../images/home/sobreEmpresa.png";
+import sobreImgDARK from "../images/home/sobreEmpresaDARK.png";
+
+import cartazAquaFast from "../images/home/cartazAquaFast.png";
+import cartazAquaFastDARK from "../images/home/cartazAquaFastDARK.png";
+
+import googlePlayImg from "../images/home/googlePlay.png";
+import appStoreImg from "../images/home/appStore.png";
+import qrCodeImg from "../images/home/qrcodeEmpresa.png";
+import phoneImg from "../images/home/phone.png";
+import brandingAquaFast from '../images/BrandingAquaFast.png'; 
+
+import ContactSection from "../components/ContactSection";
+
+
 const HomePage = () => {
   return (
     <>
-      {/* Hero Section */}
+      { }
       <section className="hero-section">
-                <img
-            src="https://media.discordapp.net/attachments/1092992349388414976/1422698443914219672/Aquafast.png?ex=68dd9ead&is=68dc4d2d&hm=c3bb5571b81296ac567d5afa455e7bd46d5b48aa5d9ebd4446bd2f09168896ea&=&format=webp&quality=lossless&width=731&height=534"
-            alt="Aquafast Logo"
-            className="logo-img"
-        />
+        <img src={brandingAquaFast} alt="Aquafast Logo" className="logo-img" />
 
       </section>
 
-      {/* About Us Section */}
+      { }
       <section className="about-section">
         <div className="container">
           <div className="about-grid">
             <div className="about-image-wrapper">
               <img
-                src=""
+                src={sobreImg}
                 alt="Fachada do escritório AquaFast"
                 className="about-image"
               />
               <div className="about-image-overlay">
-                  <Logo className="logo-overlay"/>
+                <Logo className="logo-overlay" />
               </div>
             </div>
             <div className="about-content">
@@ -42,7 +59,7 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-      {/* Objectives Section */}
+      { }
       <section className="objectives-section">
         <div className="container">
           <h2 className="objectives-title">Nossos Principais Objetivos</h2>
@@ -51,21 +68,21 @@ const HomePage = () => {
           </p>
           <div className="objectives-grid">
             <div className="objective-card">
-              <img src="https://media.istockphoto.com/id/1316134499/pt/foto/a-concept-image-of-a-magnifying-glass-on-blue-background-with-a-word-example-zoom-inside-the.jpg?s=612x612&w=0&k=20&c=raTXPP4qnJy_svR1J6dOYeoonbJOWeezfvGd9mAE5vo=" alt="Missão" className="objective-image" />
+              <img src={missaoImg} alt="Missão" className="objective-image" />
               <h3 className="objective-title">Missão</h3>
               <p className="objective-text">
                 É uma empresa que busca ajudar a comunidade encontrando formas inteligentes de transformar a água da chuva em energia elétrica. Queremos ajudar a comunidade com o nosso dispositivo e aplicativo.
               </p>
             </div>
             <div className="objective-card">
-              <img src="https://media.istockphoto.com/id/1316134499/pt/foto/a-concept-image-of-a-magnifying-glass-on-blue-background-with-a-word-example-zoom-inside-the.jpg?s=612x612&w=0&k=20&c=raTXPP4qnJy_svR1J6dOYeoonbJOWeezfvGd9mAE5vo=" alt="Visão" className="objective-image" />
+              <img src={visaoImg} alt="Visão" className="objective-image" />
               <h3 className="objective-title">Visão</h3>
               <p className="objective-text">
                 É uma empresa que busca ajudar a comunidade encontrando formas inteligentes de transformar a água da chuva em energia elétrica. Queremos ajudar a comunidade com o nosso dispositivo e aplicativo.
               </p>
             </div>
             <div className="objective-card">
-              <img src="https://media.istockphoto.com/id/1316134499/pt/foto/a-concept-image-of-a-magnifying-glass-on-blue-background-with-a-word-example-zoom-inside-the.jpg?s=612x612&w=0&k=20&c=raTXPP4qnJy_svR1J6dOYeoonbJOWeezfvGd9mAE5vo=" alt="Valores" className="objective-image" />
+              <img src={valoresImg} alt="Valores" className="objective-image" />
               <h3 className="objective-title">Valores</h3>
               <p className="objective-text">
                 Busca constante por novas tecnologias e soluções criativas para ajudar a comunidade a medir e reduzir o consumo de água e eletricidade de maneira eficiente.
@@ -74,6 +91,62 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+
+      <section className="cartaz-section">
+        <img
+          src={cartazAquaFast}
+          alt="Cartaz AquaFast na rua"
+          className="cartaz-image"
+        />
+      </section>
+
+      <section className="download-section">
+        <div className="container download-container">
+          <div className="download-content">
+            <h2 className="download-title">Download nosso Novo App</h2>
+            <p className="download-text">
+              É uma empresa que busca ajudar a comunidade encontrando formas inteligentes
+              de transformar a água da chuva em energia elétrica. Nosso aplicativo vai
+              além do simples controle: ele oferece dicas personalizadas de economia,
+              mostra relatórios de uso e alerta quando há desperdícios.
+            </p>
+
+            <div className="download-buttons">
+              <img
+                src={googlePlayImg}
+                alt="Google Play"
+                className="store-badge"
+              />
+              <img
+                src={appStoreImg}
+                alt="App Store"
+                className="store-badge"
+              />
+              <img
+                src={qrCodeImg}
+                alt="QR Code"
+                className="qr-code"
+              />
+            </div>
+          </div>
+
+          <div className="download-image-wrapper">
+            <img
+              src={phoneImg}
+              alt="App no celular"
+              className="download-image"
+            />
+          </div>
+        </div>
+      </section>
+
+          {/* Contato */}
+      <ContactSection />
+
+      
+
+
+
 
     </>
   );
