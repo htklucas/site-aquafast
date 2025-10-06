@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './MembersPage.css';
-import brandingAquaFast from '../images/BrandingAquaFast.png'; 
+import mockapmembros from '../images/MockapMembros.png'; 
 import trevisanImg from '../images/Trevisan.png';
 import poletoImg from '../images/Poleto.png';
 import martinsImg from '../images/Martins.png';
 import lucasImg from '../images/Lucas.png';
+import ContactSection from "../components/ContactSection";
 
-
+import brandingAquaFast from "../images/BrandingAquaFast.png";
+import brandingAquaFastDARK from "../images/BrandingAquaFastDARK.png";
 
 const teamMembers = [
   {
@@ -40,28 +42,60 @@ const teamMembers = [
 ];
 
 const MembersPage = () => {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  // Detecta quando o tema muda (igual na Home)
+  useEffect(() => {
+    const checkDarkMode = () => {
+      setIsDarkMode(document.body.classList.contains('dark'));
+    };
+
+    checkDarkMode();
+
+    const observer = new MutationObserver(checkDarkMode);
+    observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="members-container">
-      <img src={brandingAquaFast} alt="Logo Aquafast" className="page-logo" />
-      <h2 className="members-title">Membros da Equipe</h2>
-      <div className="members-grid">
-        {teamMembers.map((member, index) => (
-          <div className="member-card" key={index}>
-            <img src={member.image} alt={member.name} className="member-image" />
-            <h3 className="member-name">{member.name}</h3>
-            <p className="member-role">{member.role}</p>
-            <div className="member-social-links">
-              <a href={member.email} target="_blank" rel="noopener noreferrer" className="social-link-box">
-                M
-              </a>
-              <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="social-link-box">
-                in
-              </a>
-            </div>
+    <>
+      <div className="page-wrapper">
+        {/* Branding AquaFast (troca automática) */}
+        <div className="imagem">
+          <img
+            src={isDarkMode ? brandingAquaFastDARK : brandingAquaFast}
+            alt="Logo AquaFast"
+            className="page-logo"
+          />
+        </div>
+
+        <div className="members-container">
+          <h2 className="members-title">Membros da Equipe</h2>
+          <div className="members-grid">
+            {teamMembers.map((member, index) => (
+              <div className="member-card" key={index}>
+                <img src={member.image} alt={member.name} className="member-image" />
+                <h3 className="member-name">{member.name}</h3>
+                <p className="member-role">{member.role}</p>
+                <div className="member-social-links">
+                  <a href={member.email} target="_blank" rel="noopener noreferrer" className="social-link-box">M</a>
+                  <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="social-link-box">in</a>
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
+
+        {/* Mockup */}
+        <div className="mockup-section">
+          <img src={mockapmembros} alt="Mockup de Membros" className="mockup-image" />
+        </div>
       </div>
-    </div>
+
+      {/* Contato */}
+      <ContactSection />
+    </>
   );
 };
 
