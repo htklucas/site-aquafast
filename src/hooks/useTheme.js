@@ -2,13 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 
 export const useTheme = () => {
   const [theme, setTheme] = useState(() => {
-    if (typeof window !== 'undefined') {
-      const savedTheme = localStorage.getItem('theme');
-      if (savedTheme) {
-        return savedTheme;
-      }
-      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    }
+    // força tema claro sempre
     return 'light';
   });
 

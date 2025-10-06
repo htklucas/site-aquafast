@@ -1,8 +1,17 @@
-.imagem {
+/* ==============================
+   PÁGINA DE MEMBROS (LIGHT + DARK)
+============================== */
+
+.imagem,
+.members-container,
+.mockup-section {
+  display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.imagem {
   background-color: #e5e5e5;
-  /* border: solid 2px red; */
 }
 
 .page-logo {
@@ -10,19 +19,18 @@
 }
 
 .members-container {
-  display: flex;
   flex-direction: column;
-  align-items: center;
   padding: 80px 20px;
   background-color: #e5e5e5;
-  font-family: 'Arial', sans-serif;
+  font-family: Arial, sans-serif;
+  text-align: center;
 }
 
 .members-title {
   font-size: 2.5rem;
   color: #333;
-  margin-bottom: 70px;
   font-weight: bold;
+  margin-bottom: 70px;
 }
 
 .members-grid {
@@ -34,24 +42,23 @@
 }
 
 .member-card {
-  background-color: #ffffff;
+  position: relative;
+  background: #fff;
   border-radius: 40px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  text-align: center;
   padding: 100px 20px 20px;
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
-  margin-top: 50px;
 }
 
 .member-image {
   width: 150px;
   height: 150px;
   border-radius: 50%;
+  border: 5px solid #fff;
   object-fit: cover;
-  border: 5px solid #ffffff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   position: absolute;
   top: -75px;
@@ -63,7 +70,7 @@
   font-size: 1.3rem;
   font-weight: bold;
   color: #333;
-  margin: 0 0 10px 0;
+  margin-bottom: 10px;
 }
 
 .member-role {
@@ -86,10 +93,9 @@
   align-items: center;
   width: 35px;
   height: 35px;
-  background-color: transparent;
   border-radius: 5px;
-  text-decoration: none;
   color: #333;
+  text-decoration: none;
   font: bold 0.9rem Arial, Helvetica, sans-serif;
   transition: background-color 0.2s ease;
 }
@@ -98,44 +104,42 @@
   background-color: #dcdcdc;
 }
 
+/* ===== MOCKUP SECTION ===== */
+.mockup-section {
+  width: 100%;
+  background-color: #f8f8f8;
+}
+
+.mockup-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===== RESPONSIVIDADE ===== */
 @media (max-width: 768px) {
   .members-grid {
     grid-template-columns: 1fr;
     gap: 80px 20px;
   }
-
-  .member-card:first-child {
-    margin-top: 50px;
-  }
 }
 
-
-.mockup-section {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f8f8f8; 
+/* ===== MODO ESCURO ===== */
+body.dark {
+  color: #e5e7eb;
 }
 
-.mockup-image {
-  max-width: 100%; 
-  height: auto;    
-  display: block;  
-}
-
-/* ===== MODO ESCURO (Members Page) ===== */
-body.dark .imagem {
+body.dark .imagem,
+body.dark .mockup-section {
   background-color: #1e1e1e;
 }
 
 body.dark .members-container {
   background-color: #121212;
-  color: #e5e7eb;
 }
 
 body.dark .members-title {
-  color: white;
+  color: #fff;
 }
 
 body.dark .member-card {
@@ -152,14 +156,9 @@ body.dark .member-role {
 }
 
 body.dark .social-link-box {
-  background-color: transparent;
   color: #e5e7eb;
 }
 
 body.dark .social-link-box:hover {
   background-color: #3a3a3a;
-}
-
-body.dark .mockup-section {
-  background-color: #1e1e1e;
 }

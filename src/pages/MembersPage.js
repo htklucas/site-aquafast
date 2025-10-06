@@ -7,6 +7,8 @@ import martinsImg from '../images/Martins.png';
 import lucasImg from '../images/Lucas.png';
 import ContactSection from "../components/ContactSection";
 
+import { FaLinkedin, FaEnvelope } from 'react-icons/fa';
+
 import brandingAquaFast from "../images/BrandingAquaFast.png";
 import brandingAquaFastDARK from "../images/BrandingAquaFastDARK.png";
 
@@ -79,8 +81,22 @@ const MembersPage = () => {
                 <h3 className="member-name">{member.name}</h3>
                 <p className="member-role">{member.role}</p>
                 <div className="member-social-links">
-                  <a href={member.email} target="_blank" rel="noopener noreferrer" className="social-link-box">M</a>
-                  <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="social-link-box">in</a>
+                  <a
+                    href={member.email}
+                    className="social-link-box"
+                    aria-label={`Enviar email para ${member.name}`}
+                  >
+                    <FaEnvelope size={20} />
+                  </a>
+                  <a
+                    href={member.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="social-link-box"
+                    aria-label={`LinkedIn de ${member.name}`}
+                  >
+                    <FaLinkedin size={20} />
+                  </a>
                 </div>
               </div>
             ))}

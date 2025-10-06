@@ -1,0 +1,259 @@
+/* ==============================
+   SEÇÕES GERAIS
+============================== */
+
+section {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark section {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* ==============================
+   SEÇÃO: NOSSA IDEIA
+============================== */
+
+.ContainerIdeia {
+  padding: 32px 16px;
+  background-color: var(--color-bg-secondary-light);
+}
+
+body.dark .ContainerIdeia {
+  background-color: var(--color-bg-secondary-dark);
+}
+
+.logo-img {
+  width: 100%;
+}
+
+.nossaIdeia-Conteudo-Lado-a-Lado {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.Ideia-Imagem-wrapper,
+.Projeto-Imagem-wrapper {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.Ideia-Imagem {
+  width: 90%;
+  border-radius: 24px;
+  display: block;
+  object-fit: cover;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.nossaIdeia-bloco-texto,
+.projeto-bloco-texto {
+  flex: 1;
+  font-size: 16px;
+  text-align: left;
+  margin-top: 100px;
+}
+
+.nossaIdeia-Titulo,
+.Projeto-Titulo {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 24px;
+  color: #1f2937;
+}
+
+body.dark .nossaIdeia-Titulo,
+body.dark .Projeto-Titulo {
+  color: white;
+}
+
+.nossaIdeia-Texto,
+.Projeto-Texto {
+  line-height: 1.6;
+  color: var(--color-text-muted-light);
+}
+
+body.dark .nossaIdeia-Texto,
+body.dark .Projeto-Texto {
+  color: var(--color-text-muted-dark);
+}
+
+/* ==============================
+   SEÇÃO: OBJETIVO DO PROJETO
+============================== */
+
+.ObjetivoProjeto {
+  padding: 64px 16px;
+  background-color: var(--color-bg-light);
+}
+
+body.dark .ObjetivoProjeto {
+  background-color: var(--color-bg-dark);
+}
+
+.Objetivo {
+  max-width: 900px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.ObjetivoTitulo {
+  font-size: 48px;
+  font-weight: 300;
+  margin-bottom: 8px;
+  color: #1f2937;
+}
+
+body.dark .ObjetivoTitulo {
+  color: white;
+}
+
+.ObjetivoTexto {
+  margin: 8px auto 0;
+  font-size: 16px;
+  color: var(--color-text-muted-light);
+}
+
+body.dark .ObjetivoTexto {
+  color: var(--color-text-muted-dark);
+}
+
+.ContainerObjetivoBlocos {
+  display: grid;
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Blocos */
+.projeto-bloco-item {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bg-secondary-light);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark .projeto-bloco-item {
+  background-color: var(--color-bg-secondary-dark);
+}
+
+.projeto-bloco-imagem-wrapper {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  flex-shrink: 0;
+}
+
+.projeto-bloco-bg-color {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(135deg, #0077b6 0%, #0077b6 50%, #b3e0ff 50%, #b3e0ff 100%);
+  z-index: 1;
+}
+
+body.dark .projeto-bloco-bg-color {
+  background-image: linear-gradient(135deg, #005f87 0%, #005f87 50%, #00344f 50%, #00344f 100%);
+}
+
+.projeto-bloco-imagem {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+  border-radius: 8px;
+  z-index: 2;
+}
+
+.projeto-bloco-texto-wrapper {
+  padding: 24px;
+  background-color: var(--color-bg-light);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+body.dark .projeto-bloco-texto-wrapper {
+  background-color: var(--color-bg-dark);
+}
+
+.projeto-bloco-titulo-bloco {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #1f2937;
+}
+
+body.dark .projeto-bloco-titulo-bloco {
+  color: white;
+}
+
+.projeto-bloco-texto-bloco {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--color-text-muted-light);
+}
+
+body.dark .projeto-bloco-texto-bloco {
+  color: var(--color-text-muted-dark);
+}
+
+/* ==============================
+   SEÇÃO: NOSSO PROJETO
+============================== */
+
+.ContainerNossoProjeto {
+  background-color: var(--color-bg-secondary-light);
+  padding: 64px;
+}
+
+body.dark .ContainerNossoProjeto {
+  background-color: var(--color-bg-secondary-dark);
+}
+
+.projeto-conteudo-lado-a-lado {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.Projeto-Imagem {
+  width: 60%;
+  border-radius: 24px;
+  object-fit: cover;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-left: 70px;
+}
+
+.Projeto-Texto p {
+  margin-bottom: 24px;
+}
+
+/* ==============================
+   RESPONSIVIDADE
+============================== */
+
+@media (min-width: 768px) {
+  .nossaIdeia-Conteudo-Lado-a-Lado,
+  .projeto-conteudo-lado-a-lado {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .Ideia-Imagem-wrapper { width: 40%; flex-shrink: 0; margin: 0; }
+  .Projeto-Imagem-wrapper { width: 50%; flex-shrink: 0; margin: 0; }
+  .projeto-bloco-item { flex-direction: row; height: 250px; }
+  .projeto-bloco-imagem-wrapper { width: 40%; height: 100%; }
+  .projeto-bloco-texto { margin-top: 112px; }
+}
